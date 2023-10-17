@@ -1,7 +1,11 @@
 package routes
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"f1-go-api/controllers"
+
+	"github.com/gofiber/fiber/v2"
+)
 
 func UserRoute(app *fiber.App) {
-
+	app.Get("/questions", controllers.GetQuestions)
 }
