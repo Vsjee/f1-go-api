@@ -18,5 +18,5 @@ func main() {
 	routes.UserRoute(app)
 
 	//port
-	app.Listen("0.0.0.0:" + "6000")
+	app.Listen("3000")
 }
