@@ -18,5 +18,5 @@ func main() {
 	routes.UserRoute(app)
 
 	//port
-	app.Listen(":6000")
+	app.Listen(":8080")
 }
