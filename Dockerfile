@@ -10,9 +10,6 @@ COPY . /app
 # Download and install any required dependencies
 RUN go mod download
 
-# DON'T DO IT, BE BETTER THAN ME.
-ENV MONGOURI=mongodb+srv://davidfelipehernandez1:rvVAz2hgfAFTSVt1@dbm.h04vkul.mongodb.net/
-
 # Build the Go app
 RUN go build -o main .
 
