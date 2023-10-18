@@ -2,7 +2,6 @@ package configs
 
 import (
 	"log"
-	"os"
 
 	"github.com/joho/godotenv"
 )
@@ -14,5 +13,5 @@ func EnvMongoURI() string {
 		log.Fatal("Error loading .env file")
 	}
 
-	return os.Getenv("MONGOURI")
+	return "mongodb+srv://davidfelipehernandez1:rvVAz2hgfAFTSVt1@dbm.h04vkul.mongodb.net/"
 }
