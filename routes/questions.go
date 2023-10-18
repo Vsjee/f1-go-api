@@ -6,6 +6,6 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-func UserRoute(app *fiber.App) {
+func QuestionsRoute(app *fiber.App) {
 	app.Get("/questions", controllers.GetQuestions)
 }
