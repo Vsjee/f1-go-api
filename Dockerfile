@@ -18,7 +18,7 @@
 
 # # Run the container
 # CMD ["/app/main"]
-FROM golang:1.16-alpine3.14
+FROM golang:1.21.3-alpine3.14
 
 WORKDIR /app
 
