@@ -17,13 +17,19 @@ func main() {
 	configs.ConnectDB()
 
 	//routes
-	routes.UserRoute(app)
+	//base api
+	app.Get("/", func(c *fiber.Ctx) error {
+		return c.SendString("API for study purposes, gitrepo: https://github.com/Vsjee/f1-go-api")
+	})
+	//questions api
+	routes.QuestionsRoute(app)
 
+	//get port
 	port := os.Getenv("PORT")
 	if port == "" {
 		port = "8080"
 	}
 
-	//port
+	//start server
 	log.Fatal(app.Listen("0.0.0.0:" + port))
 }
