@@ -11,13 +11,13 @@ import (
 )
 
 func ConnectDB() *mongo.Client {
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb+srv://davidfelipehernandez1:rvVAz2hgfAFTSVt1@dbm.h04vkul.mongodb.net/"))
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb+srv://davidfelipehernandez1:rvVAz2hgfAFTSVt1@dbm.h04vkul.mongodb.net/"))
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	ctx, _ := context.WithTimeout(context.Background(), 10*time.Second)
-	err = client.Connect(ctx)
+	client, err = mongo.Connect(context.TODO(), options.Client().ApplyURI("mongodb+srv://davidfelipehernandez1:rvVAz2hgfAFTSVt1@dbm.h04vkul.mongodb.net/"))
 	if err != nil {
 		log.Fatal(err)
 	}
